@@ -13,7 +13,7 @@
 
 ##Step5 配置 config.js
 ```js
-config.js
+// config.js
 module.exports = { 
     corpid: 'corpid_here',
     corpsecret: 'secret_here',
