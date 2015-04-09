@@ -9,9 +9,9 @@
 设置> 权限管理 > 新建管理组 > 页面底部 > 在应用权限内添加新建的应用 > 页面底部“开发者凭据”
 
 ##Step4 新建应用 && 记录应用ID
-应用中心新建应用后，会有一个应用ID
+应用中心新建应用后，会有一个应用ID(Product ID)
 
-##Step5 配置config.js
+##Step5 配置 config.js
 ```js
 config.js
 module.exports = { 
@@ -19,7 +19,12 @@ module.exports = {
     corpsecret: 'secret_here',
 };
 ```
-##Step6 配置发送目标以及信息模板  app.js
+
+##Step6 配置微信API,发送目标以及信息模板  app.js
+```js
+    // CorpID, Secret, Product ID
+    var api = new webchat(config.corpid, config.corpsecret, 10);
+```
 ```js
     //发送目标
     var to = {
